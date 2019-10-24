@@ -8,7 +8,7 @@ program main
     type(search_result) :: search_res
     integer, dimension(:), allocatable :: first_array, second_array
 
-    write(*,"(A,$)") "Put numbers to find GCD: "
+    write(*,"(A,$)") "Put numbers to find their decomposition, GCD, LCM and check for mutal simplicity: "
 
     read(*,*) first, second
 
@@ -25,15 +25,15 @@ program main
 
     do i = 1,max(len1,len2)
         if (len1 >= i) then
-            write(*,"(I5,$)") first_array(i)
+            write(*,"(I20,$)") first_array(i)
         else
-            write(*,"(A5,$)") "     "
+            write(*,"(A20,$)") "                    "
         end if
 
         if (len2 >= i) then
-            write(*,"(I5,$)") second_array(i)
+            write(*,"(I20,$)") second_array(i)
         else
-            write(*,"(A5,$)") "     "
+            write(*,"(A20,$)") "                    "
         end if
         write(*,*)
     end do
